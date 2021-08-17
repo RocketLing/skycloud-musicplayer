@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>SkyCloud</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top-bar">
+            <i class="bx bx-chevron-down"></i>
+            <span>Now Playing</span>
+            <i class='bx bx-dots-horizontal-rounded'></i>
+        </div>
+
+        <div class="img">
+            <img src="" alt="img">
+        </div>
+        <div class="song-details">
+            <p class="song-title"></p>
+            <p class="artist"></p>
+        </div>
+
+        <div class="control-prog">
+            <div class="prog-bar"></div>
+            <div class="timer">
+                <span class="current"></span>
+                <span class="duration"></span>
+            </div>
+            <audio id="main-audio" src=""></audio>
+        </div>
+
+        <div class="controls">
+            <i id="prev" class="bx bx-skip-previous" onclick="prevMusic()"></i>
+            <div class="play-pause" onclick="playPauseMusic()">
+                <i class="bx bx-play"></i>
+            </div>
+            <i id="next" class="bx bx-skip-next" onclick="nextMusic()"></i>
+        </div>
+        <div class="controls">
+            <div class="volume-bar">
+                <i class='bx bx-volume-low'></i>
+                <input type="range" min="1" max="100"
+                  value="99" class="volume-slider" onchange="setVolume()">
+                  <i class='bx bx-volume-full'></i>
+            </div>
+            <i id="more-music" class='bx bxs-playlist'></i>
+        </div>
+
+        <div class="playlist">
+            <div class="header">
+                <div class="row">
+                    <i class="bx bx-music" ></i>
+                    <span>Music list</span>
+                </div>
+                <i id="close" class='bx bx-x'></i>
+            </div>
+            <ul>
+                
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
